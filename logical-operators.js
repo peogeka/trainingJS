@@ -6,5 +6,19 @@ const x2 = 50;
 const number = 30;
 console.log(x1 > number || x2 > number);
 console.log(x1 > number && x2 > number);
-console.log(`Чи більше число ${x1} від числа ${number}?` , x1 > number);
+console.log(`Чи більше число ${x1} від числа ${number}?`, x1 > number);
 
+// const balance = 0;
+// let message;
+// if (balance > 0) {
+//   message = "баланс > 0";
+// } else if (balance === 0) {
+//   message = "баланс = 0";
+// } else {
+//   message = "баланс < 0";
+// }
+// console.log(message);
+
+const balance = -100;
+const message = balance >= 0 ? "баланс >= 0" : "баланс < 0";
+console.log(message);
