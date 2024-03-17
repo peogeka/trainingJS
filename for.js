@@ -17,3 +17,19 @@ for (let i = 1; i <= employees; i += 1) {
 }
 
 console.log(`totalSalary = ${totalSalary}`);
+
+/*Задача: Написати скрипт, який підрахує суму всіх парних чисел в заданому відрізку */
+
+const min = 6;
+const max = 13;
+let total = 0;
+
+for (let i = min; i <= max; i += 1) {
+  if (i % 2 !== 0) {
+    console.log(`не парне ${i}`);
+    continue;
+  }
+  console.log(`парне ${i}`);
+  total += i;
+}
+console.log(`сума всіх парних = ${total}`);
