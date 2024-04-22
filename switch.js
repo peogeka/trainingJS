@@ -1,4 +1,4 @@
-const stars = 4;
+const stars = 2;
 let price;
 
 switch (stars) {

@@ -5,7 +5,7 @@
 /*Задача: Написати скрипт, який буде рахувати загальну кількусть зарплати*/
 const minSalary = 500;
 const maxSalary = 5000;
-const employees = 2;
+const employees = 10;
 let totalSalary = 0;
 
 for (let i = 1; i <= employees; i += 1) {
