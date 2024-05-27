@@ -3,7 +3,7 @@ const inputValue = document.querySelector("input[data-value]");
 const outputEl = document.querySelector(".js-output span");
 const btnReset = document.querySelector("button[data-reset]");
 let total = 0;
-console.log(outputEl);
+
 btnAdd.addEventListener("click", function () {
   const value = Number(inputValue.value);
   console.log(value);
