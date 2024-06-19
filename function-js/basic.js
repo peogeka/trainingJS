@@ -1,7 +1,8 @@
 const add = function (x, y) {
-  console.log("x + y =", result);
-  return x + y;
+  console.log("x=", x);
+  console.log("y=", y);
+  return x * y;
 };
 
-add(3, 5);
-add(134, 888);
+console.log("x*y=", add(12, 3));
+console.log("x*y=", add(134, 888));
