@@ -83,20 +83,88 @@
 
 // console.log(getEvenNumbers(2, 5));
 // console.log(getEvenNumbers(3, 11))
-function includes(array, value) {
-  for (const element of array) {
-    if (element === value) {
-      return true;
+// function includes(array, value) {
+//   for (const element of array) {
+//     if (element === value) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// console.log(includes([1, 2, 3, 4, 5], 3));
+// console.log(includes([1, 2, 3, 4, 5], 17));
+// console.log(
+//   includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter")
+// );
+// console.log(
+//   includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus")
+// );
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+// const keys = Object.keys(apartment);
+// for (let key of keys) {
+
+//   values.push(apartment[key])
+// }
+
+// console.log(values);
+// console.log(keys);
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price;
+//     }
+//   }
+//   return null;
+// }
+// console.log(getProductPrice("Gripp"));
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   const allPropValues = [];
+//   for (const product of products) {
+//     if (product[propName]) {
+//       allPropValues.push(product[propName]);
+//     }
+//   }
+//   return allPropValues;
+// }
+
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function calculateTotalPrice(productName) {
+  let totalPrice = 0;
+  for (const { name, price, quantity } of products) {
+    if (name === productName) {
+      totalPrice = price * quantity;
     }
   }
-  return false;
+  return totalPrice;
 }
 
-console.log(includes([1, 2, 3, 4, 5], 3));
-console.log(includes([1, 2, 3, 4, 5], 17));
-console.log(
-  includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter")
-);
-console.log(
-  includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus")
-);
+console.log(calculateTotalPrice("Radar"));
