@@ -30,42 +30,47 @@
 //   .then((res) => res.json())
 //   .then(onRequestSuccess);
 
-// const filter = function (array, test) {};
-// const fruits = [
-//   {
-//     name: "Apple",
-//     quantity: 10,
-//     isFresh: true,
-//   },
-//   {
-//     name: "Banana",
-//     quantity: 5,
-//     isFresh: true,
-//   },
-//   {
-//     name: "Orange",
-//     quantity: 8,
-//     isFresh: false,
-//   },
-// ];
-
 const filter = function (array, test) {
   const filteredNumber = [];
   for (const el of array) {
+    console.log(el);
     if (test(el)) {
-      console.log(test(el));
       filteredNumber.push(el);
     }
   }
   return filteredNumber;
 };
 
-const callback1 = function (number) {
-  return number >= 3;
-};
-const callback2 = function (number) {
-  return number < 2;
+// const callback1 = function (number) {
+//   return number >= 3;
+// };
+// const callback2 = function (number) {
+//   return number < 2;
+// };
+
+// console.log(filter([1, 2, 3, 4, 5, 6], callback1));
+// console.log(filter([1, 2, 3, 4, 5, 6, 7], callback2));
+
+const fruits = [
+  {
+    name: "Apple",
+    quantity: 10,
+    isFresh: true,
+  },
+  {
+    name: "Banana",
+    quantity: 5,
+    isFresh: true,
+  },
+  {
+    name: "Orange",
+    quantity: 8,
+    isFresh: false,
+  },
+];
+
+const getFilterForQuantity = function (fruit) {
+  return fruit.quantity > 5;
 };
 
-console.log(filter([1, 2, 3, 4, 5, 6], callback1));
-console.log(filter([1, 2, 3, 4, 5, 6, 7], callback2));
+console.log(filter(fruits, getFilterForQuantity));
