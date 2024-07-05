@@ -30,10 +30,9 @@
 //   .then((res) => res.json())
 //   .then(onRequestSuccess);
 
-const filter = function (array, test) {
+const filter = (array, test) => {
   const filteredNumber = [];
   for (const el of array) {
-    console.log(el);
     if (test(el)) {
       filteredNumber.push(el);
     }
@@ -41,15 +40,9 @@ const filter = function (array, test) {
   return filteredNumber;
 };
 
-// const callback1 = function (number) {
-//   return number >= 3;
-// };
-// const callback2 = function (number) {
-//   return number < 2;
-// };
+console.log(filter([1, 2, 3, 4, 5, 6], (number) => number >= 3));
 
-// console.log(filter([1, 2, 3, 4, 5, 6], callback1));
-// console.log(filter([1, 2, 3, 4, 5, 6, 7], callback2));
+console.log(filter([1, 2, 3, 4, 5, 6, 7], (number) => number < 2));
 
 const fruits = [
   {
@@ -69,8 +62,4 @@ const fruits = [
   },
 ];
 
-const getFilterForQuantity = function (fruit) {
-  return fruit.quantity > 5;
-};
-
-console.log(filter(fruits, getFilterForQuantity));
+console.log(filter(fruits, (fruit) => fruit.quantity > 5));

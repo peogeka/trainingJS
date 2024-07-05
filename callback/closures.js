@@ -13,16 +13,17 @@
 
 // poly("pumpkin buns");
 
-const rounder = function (places) {
-  return function (number) {
-    return Number(number.toFixed(places));
-  };
-};
+// const rounder = function (places) {
+//   return function (number) {
+//     return Number(number.toFixed(places));
+//   };
+// };
 
-const rounder1 = rounder(2);
+// const rounder1 = rounder(2);
 
-console.log(rounder1(5.67895));
+// console.log(rounder1(5.67895));
 
-const rounder2 = rounder(0);
+// const rounder2 = rounder(0);
 
-console.log(rounder2(5.67895));
+// console.log(rounder2(5.67895));
+
