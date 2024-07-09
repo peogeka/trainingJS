@@ -47,17 +47,20 @@ const peopleName = peoples.map((people) => people.name);
 // console.log("peopleName:", peopleName);
 
 const peopleAge = peoples.map((people) => ({ ...people, age: people.age + 1 }));
-console.log("peopleAge:", peopleAge);
+// console.log("peopleAge:", peopleAge);
 
 // змінити в  "Emily" професію
 const whoToChange = "Emily";
 
 const changeProfession = peoples.map((player) => {
+  
   if (player.name === whoToChange) {
     return { ...player, profession: "Doctor" };
   }
   return player;
 });
 
-
 console.log("changeProfession:", changeProfession);
+
+
+
