@@ -40,10 +40,14 @@ const players = [
   },
 ];
 
-const onlinePlayers = players.filter(({ onLine }) => onLine);
-console.log("onlinePlayers:", onlinePlayers);
-const offLinePlayers = players.filter(({ onLine }) => !onLine);
-console.log("offLinePlayers:", offLinePlayers);
+// const onlinePlayers = players.filter(({ onLine }) => onLine);
+// console.log("onlinePlayers:", onlinePlayers);
+// const offLinePlayers = players.filter(({ onLine }) => !onLine);
+// console.log("offLinePlayers:", offLinePlayers);
 
-const hardcorePlayers = players.filter(({ timePlayed }) => timePlayed > 100);
-console.log("hardcorePlayers:", hardcorePlayers);
+// const hardcorePlayers = players.filter(({ timePlayed }) => timePlayed > 100);
+// console.log("hardcorePlayers:", hardcorePlayers);
+
+const topPlayer = players.reduce((max, player) => (player.points > max.points ? player : max), players[0]);
+console.log("topPlayer:", topPlayer);
+
